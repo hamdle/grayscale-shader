@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://icon.png" type="Texture" id=1]
+
+[sub_resource type="Shader" id=1]
+
+code = "shader_type canvas_item;
+
+void fragment() {
+	vec4 col = texture(TEXTURE,UV);
+	float grey = (col.r + col.g + col.b) * 0.333;
+	COLOR = vec4(grey, grey, grey, col.a);
+}"
+
+[sub_resource type="ShaderMaterial" id=2]
+
+render_priority = 0
+shader = SubResource( 1 )
+_sections_unfolded = [ "Resource" ]
+
+[node name="Node" type="Node" index="0"]
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+material = SubResource( 2 )
+position = Vector2( 420.356, 289.76 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Material" ]
+
+
