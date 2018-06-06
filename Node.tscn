@@ -27,4 +27,9 @@ position = Vector2( 420.356, 289.76 )
 texture = ExtResource( 1 )
 _sections_unfolded = [ "Material" ]
 
+[node name="Sprite2" type="Sprite" parent="." index="1"]
+
+position = Vector2( 419.886, 196.438 )
+texture = ExtResource( 1 )
+
 
